@@ -1,0 +1,1 @@
+(echo "Reporte generado: $(date)" >> ~/Documents/Reports/cpu_and_memory.log) &&(echo "------------------------------" >> ~/Documents/Reports/cpu_and_memory.log) && (echo "%CPU %MEM ARGS $(date)" && ps -e -o pcpu,pmem,args --sort=pcpu | cut -d" " -f1-5 | tail) >> ~/Documents/Reports/cpu_and_memory.log; echo "Reporte generado - $(date)"
